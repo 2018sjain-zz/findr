@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "73452610732",
+    "firebase_url": "https://findr-52fce.firebaseio.com",
+    "project_id": "findr-52fce",
+    "storage_bucket": "findr-52fce.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:73452610732:android:3ab496f27cc66a05",
+        "android_client_info": {
+          "package_name": "org.sachinjain.findr"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "73452610732-gq7e01umjcmui9vm7ameo96nsp89c68s.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "org.sachinjain.findr",
+            "certificate_hash": "ec7caa840aed2eee60b7d167a790ed9add7c7916"
+          }
+        },
+        {
+          "client_id": "73452610732-ukpb1b1rb6lanjera15s5v6dcn59c2v8.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB0QueiUWhdHvPC_ZEh1xf1rKfZYm1KNwU"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "73452610732-ukpb1b1rb6lanjera15s5v6dcn59c2v8.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
