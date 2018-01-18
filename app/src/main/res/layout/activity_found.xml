@@ -4,6 +4,96 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#9DC3E6"
     tools:context="org.sachinjain.findr.FoundActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="FINDR"
+        android:textColor="@android:color/black"
+        android:textStyle="bold"
+        android:textSize="30dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintVertical_bias="0.025"
+        />
+
+    <Spinner
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintVertical_bias="0.125"
+        android:id="@+id/spinner"
+        />
+
+    <TextView
+        android:id="@+id/result1"
+        android:layout_width="380dp"
+        android:layout_height="125dp"
+        android:background="@android:color/white"
+        android:gravity="center|left"
+        android:textStyle="bold"
+        android:textSize="18dp"
+        android:text=" Item: \n Location: \n Reward: \n Name: \n Contact:"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintVertical_bias="0.25"/>
+
+    <TextView
+        android:id="@+id/result2"
+        android:layout_width="380dp"
+        android:layout_height="125dp"
+        android:background="@android:color/white"
+        android:gravity="center|left"
+        android:textStyle="bold"
+        android:textSize="18dp"
+        android:text=" Item: \n Location: \n Reward: \n Name: \n Contact:"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintVertical_bias="0.55"/>
+
+    <TextView
+        android:id="@+id/result3"
+        android:layout_width="380dp"
+        android:layout_height="125dp"
+        android:background="@android:color/white"
+        android:gravity="center|left"
+        android:textStyle="bold"
+        android:textSize="18dp"
+        android:text=" Item: \n Location: \n Reward: \n Name: \n Contact:"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintVertical_bias="0.85"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#BDD7EE"
+        android:text="BACK"
+        android:textStyle="bold"
+        android:id="@+id/back"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintVertical_bias="0.98"/>
 
 </android.support.constraint.ConstraintLayout>

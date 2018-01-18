@@ -23,7 +23,7 @@
         />
 
     <EditText
-        android:layout_width="0dp"
+        android:layout_width="380dp"
         android:layout_height="50dp"
         android:hint='Name'
         android:id="@+id/name"
@@ -31,11 +31,11 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintVertical_bias="0.15"/>
 
     <EditText
-        android:layout_width="0dp"
+        android:layout_width="380dp"
         android:layout_height="50dp"
         android:hint='Location'
         android:id="@+id/location"
@@ -43,11 +43,11 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintVertical_bias="0.25"/>
 
     <EditText
-        android:layout_width="0dp"
+        android:layout_width="380dp"
         android:layout_height="50dp"
         android:hint='Item'
         android:id="@+id/item"
@@ -55,23 +55,23 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintVertical_bias="0.35"/>
 
     <EditText
-        android:layout_width="0dp"
+        android:layout_width="380dp"
         android:layout_height="50dp"
-        android:hint='Reward'
+        android:hint='Reward - $'
         android:id="@+id/reward"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintVertical_bias="0.45"/>
 
     <EditText
-        android:layout_width="0dp"
+        android:layout_width="380dp"
         android:layout_height="50dp"
         android:hint='Description'
         android:id="@+id/description"
@@ -79,19 +79,19 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintVertical_bias=".55"/>
 
     <EditText
-        android:layout_width="0dp"
+        android:layout_width="380dp"
         android:layout_height="50dp"
-        android:hint='Contact'
+        android:hint='Contact - (###) ### - ####'
         android:id="@+id/contact"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintVertical_bias="0.65"/>
 
     <Button

@@ -48,9 +48,9 @@ public class LostActivity extends AppCompatActivity {
                 String name = mNameText.getText().toString();
                 String location = mLocationText.getText().toString();
                 String item = mItemText.getText().toString();
-                String reward = mRewardText.getText().toString();
+                String reward = mRewardText.getText().toString().substring(1);
                 String description = mDescriptionText.getText().toString();
-                String contact = mContactText.getText().toString();
+                String contact = mContactText.getText().toString().replaceAll("[^0-9]","");
 
                 if (TextUtils.isEmpty(name)){
                     mNameText.setError("Required");
