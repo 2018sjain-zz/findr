@@ -9,6 +9,15 @@ import android.widget.Button;
 import android.widget.Spinner;
 import android.widget.TextView;
 
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
+
+import java.util.ArrayList;
+import java.util.List;
+
 public class FoundActivity extends AppCompatActivity {
 
     private Spinner mSpinner;
@@ -16,6 +25,7 @@ public class FoundActivity extends AppCompatActivity {
     private TextView mResult2;
     private TextView mResult3;
     private Button mBack;
+    private List<Post> postList;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,12 +37,39 @@ public class FoundActivity extends AppCompatActivity {
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         mSpinner.setAdapter(adapter);
 
+        final FirebaseDatabase database = FirebaseDatabase.getInstance();
+        DatabaseReference posts = database.getReference("posts");
+
         mResult1 = (TextView)findViewById(R.id.result1);
         mResult2 = (TextView)findViewById(R.id.result2);
         mResult3 = (TextView)findViewById(R.id.result3);
+        String status = mSpinner.getSelectedItem().toString();
+
+        postList = new ArrayList<>();
+
+        posts.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(DataSnapshot dataSnapshot) {
+
+                postList.clear();
+
+                for(DataSnapshot postSnapshot: dataSnapshot.getChildren()){
+                    Post post = postSnapshot.getValue(Post.class);
+                    postList.add(post);
+                }
+            }
+
+            @Override
+            public void onCancelled(DatabaseError databaseError) {
+
+            }
+        });
+
+        String[] post1 = mResult1.getText().toString().split("\n");
+        String[] post2 = mResult2.getText().toString().split("\n");
+        String[] post3 = mResult3.getText().toString().split("\n");
 
         mBack = (Button)findViewById(R.id.back);
-
         mBack.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
