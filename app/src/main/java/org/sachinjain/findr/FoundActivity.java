@@ -3,6 +3,7 @@ package org.sachinjain.findr;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
@@ -37,6 +38,8 @@ public class FoundActivity extends AppCompatActivity {
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         mSpinner.setAdapter(adapter);
 
+        postList = new ArrayList<>();
+
         final FirebaseDatabase database = FirebaseDatabase.getInstance();
         DatabaseReference posts = database.getReference("posts");
 
@@ -45,29 +48,15 @@ public class FoundActivity extends AppCompatActivity {
         mResult3 = (TextView)findViewById(R.id.result3);
         String status = mSpinner.getSelectedItem().toString();
 
-        postList = new ArrayList<>();
-
-        posts.addValueEventListener(new ValueEventListener() {
-            @Override
-            public void onDataChange(DataSnapshot dataSnapshot) {
-
-                postList.clear();
-
-                for(DataSnapshot postSnapshot: dataSnapshot.getChildren()){
-                    Post post = postSnapshot.getValue(Post.class);
-                    postList.add(post);
-                }
-            }
-
-            @Override
-            public void onCancelled(DatabaseError databaseError) {
-
-            }
-        });
-
         String[] post1 = mResult1.getText().toString().split("\n");
         String[] post2 = mResult2.getText().toString().split("\n");
         String[] post3 = mResult3.getText().toString().split("\n");
+        for (int x = 0; x < post1.length; x++){
+            post1[x].concat("temp\n");
+            System.out.print(post1[x]);
+        }
+        String temp1 = TextUtils.join("", post1);
+        mResult1.setText(temp1);
 
         mBack = (Button)findViewById(R.id.back);
         mBack.setOnClickListener(new View.OnClickListener() {
