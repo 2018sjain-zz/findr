@@ -5,6 +5,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.Spinner;
@@ -27,6 +28,7 @@ public class FoundActivity extends AppCompatActivity {
     private TextView mResult3;
     private Button mBack;
     private List<Post> postList;
+    private String base;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,6 +39,7 @@ public class FoundActivity extends AppCompatActivity {
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,R.array.spinner_array, android.R.layout.simple_spinner_item);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         mSpinner.setAdapter(adapter);
+        base = " Item: \n Location: \n Reward: \n Name: \n Contact: ";
 
         postList = new ArrayList<>();
 
@@ -48,15 +51,66 @@ public class FoundActivity extends AppCompatActivity {
         mResult3 = (TextView)findViewById(R.id.result3);
         String status = mSpinner.getSelectedItem().toString();
 
-        String[] post1 = mResult1.getText().toString().split("\n");
-        String[] post2 = mResult2.getText().toString().split("\n");
-        String[] post3 = mResult3.getText().toString().split("\n");
-        for (int x = 0; x < post1.length; x++){
-            post1[x].concat("temp\n");
-            System.out.print(post1[x]);
+        if (status.equals("Recent")){
+            String[] post1 = base.split("\n");
+            String[] post2 = base.split("\n");
+            String[] post3 = base.split("\n");
+
+            post1[0] += "Shoes";
+            post1[1] += "Chem Commons";
+            post1[2] += "$20";
+            post1[3] += "Sachin Jain";
+            post1[4] += "(703) 508 - 9090";
+            String temp1 = TextUtils.join("\n", post1);
+            mResult1.setText(temp1);
+
+            post2[0] += "Wallet";
+            post2[1] += "Nobel Commons";
+            post2[2] += "$50";
+            post2[3] += "Pranav Avasarala";
+            post2[4] += "(703) 934 - 3245";
+            String temp2 = TextUtils.join("\n", post2);
+            mResult2.setText(temp2);
+
+            post3[0] += "Keychain";
+            post3[1] += "Locker Room";
+            post3[2] += "$5";
+            post3[3] += "Erick Tian";
+            post3[4] += "ericktian@gmail.com";
+            String temp3 = TextUtils.join("\n", post3);
+            mResult3.setText(temp3);
         }
-        String temp1 = TextUtils.join("", post1);
-        mResult1.setText(temp1);
+
+        else if (status.equals("Reward")){
+            String[] post1 = base.split("\n");
+            String[] post2 = base.split("\n");
+            String[] post3 = base.split("\n");
+
+            post1[0] += "Shoes";
+            post1[1] += "Chem Commons";
+            post1[2] += "$20";
+            post1[3] += "Sachin Jain";
+            post1[4] += "(703) 508 - 9090";
+            String temp1 = TextUtils.join("\n", post1);
+            mResult2.setText(temp1);
+
+            post2[0] += "Wallet";
+            post2[1] += "Nobel Commons";
+            post2[2] += "$50";
+            post2[3] += "Pranav Avasarala";
+            post2[4] += "(703) 934 - 3245";
+            String temp2 = TextUtils.join("\n", post2);
+            mResult1.setText(temp2);
+
+            post3[0] += "Keychain";
+            post3[1] += "Locker Room";
+            post3[2] += "$5";
+            post3[3] += "Erick Tian";
+            post3[4] += "ericktian@gmail.com";
+            String temp3 = TextUtils.join("\n", post3);
+            mResult3.setText(temp3);
+        }
+
 
         mBack = (Button)findViewById(R.id.back);
         mBack.setOnClickListener(new View.OnClickListener() {
